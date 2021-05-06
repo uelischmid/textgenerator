@@ -6,11 +6,10 @@
 ###
 
 
-
 # setup -------------------------------------------------------------------
 pattern_type <- "character" # either 'character' or 'word'
-pattern_length <- 4 # pattern length (integer larger than 1)
-output_length <- 200 # number of characters in output
+pattern_length <- 6 # pattern length (integer larger than 1)
+output_length <- 200 # number of characters or words in output
 source_text_name <- "obama_2009_inaugural.txt"
 random_seed <- 123 # seed for random number generator
 
@@ -26,8 +25,7 @@ source_text <- read_file(str_c("Data/", source_text_name)) %>%
 sort(unique(str_split(source_text, "")[[1]]))
 
 
-
-# split text --------------------------------------------------------------
+# split text into patterns and count them ---------------------------------
 if(pattern_type == "character") {
   text_length_char <- str_length(source_text)
   
@@ -82,4 +80,23 @@ if(pattern_type == "character") {
            pattern_end = map(pattern_vec, ~.x[pattern_length]))
 }
 
+
+# generate random text ----------------------------------------------------
+if (pattern_type == "character") {
+  # start like the source text starts
+  generated_text <- str_sub(source_text, start = 1, end = pattern_length - 1)
+  
+  while(str_length(generated_text) < output_length) {
+    current_pattern <- str_sub(generated_text, start = -(pattern_length - 1), end = -1)
+    
+    possible_char <- pattern_table %>% 
+      filter(pattern_start == current_pattern)
+    next_char <- sample(possible_char$pattern_end, 1, prob = possible_char$n)
+    
+    generated_text <- str_c(generated_text, next_char)
+  }
+  
+  cat(generated_text)
+  
+}
 
