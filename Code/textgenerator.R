@@ -7,9 +7,9 @@
 
 
 # setup -------------------------------------------------------------------
-pattern_type <- "character" # either 'character' or 'word'
-pattern_length <- 6 # pattern length (integer larger than 1)
-output_length <- 200 # number of characters or words in output
+pattern_type <- "word" # either 'character' or 'word'
+pattern_length <- 2 # pattern length (integer larger than 1)
+output_length <- 40 # number of characters or words in output
 source_text_name <- "obama_2009_inaugural.txt"
 random_seed <- 123 # seed for random number generator
 
@@ -22,7 +22,7 @@ source_text <- read_file(str_c("Data/", source_text_name)) %>%
   str_squish() %>% # replace double spaces
   tolower() # all lower cases
 
-sort(unique(str_split(source_text, "")[[1]]))
+# sort(unique(str_split(source_text, "")[[1]]))
 
 
 # split text into patterns and count them ---------------------------------
@@ -86,17 +86,42 @@ if (pattern_type == "character") {
   # start like the source text starts
   generated_text <- str_sub(source_text, start = 1, end = pattern_length - 1)
   
+  # add characters according to probabilities
   while(str_length(generated_text) < output_length) {
     current_pattern <- str_sub(generated_text, start = -(pattern_length - 1), end = -1)
     
-    possible_char <- pattern_table %>% 
+    possible_chars <- pattern_table %>% 
       filter(pattern_start == current_pattern)
-    next_char <- sample(possible_char$pattern_end, 1, prob = possible_char$n)
+    next_char <- sample(possible_chars$pattern_end, 1, prob = possible_chars$n)
     
     generated_text <- str_c(generated_text, next_char)
   }
   
   cat(generated_text)
   
+} else if (pattern_type == "word") {
+  # start like the source text starts
+  generated_text <- text_word[1:(pattern_length - 1)]
+  
+  # add words according to probabilities
+  while(length(generated_text) < output_length) {
+    current_pattern <- tail(generated_text, n = pattern_length - 1)
+    
+    possible_words <- pattern_table %>% 
+      filter(pattern_start == current_pattern)
+    next_word <- sample(possible_words$pattern_end, 1, prob = possible_words$n)[[1]]
+    
+    generated_text <- c(generated_text, next_word)
+  }
+  
+  # re-substitute dummy-words with punctuation 
+  generated_text <- str_c(generated_text, collapse = " ") %>% 
+    str_replace_all(" punctperiod ", ". ") %>% 
+    str_replace_all(" punctcomma ", ", ") %>% 
+    str_replace_all(" punctcolon ", ": ") %>%
+    str_replace_all(" punctsemicolon ", "; ")
+  
+  cat(generated_text)
 }
+
 
