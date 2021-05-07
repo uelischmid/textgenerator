@@ -3,3 +3,7 @@ Source of input texts:
 obama_2009_inaugural.txt
 http://obamaspeeches.com/P-Obama-Inaugural-Speech-Inauguration.htm
 visited 2021-05-07
+
+trump_2017_inaugural.txt
+https://www.politico.com/story/2017/01/full-text-donald-trump-inauguration-speech-transcript-233907
+visited 2021-05-07
