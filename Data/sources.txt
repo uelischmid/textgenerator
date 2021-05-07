@@ -1,0 +1,5 @@
+Source of input texts:
+
+obama_2009_inaugural.txt
+http://obamaspeeches.com/P-Obama-Inaugural-Speech-Inauguration.htm
+visited 2021-05-07
