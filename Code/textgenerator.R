@@ -7,19 +7,19 @@
 
 
 # setup -------------------------------------------------------------------
-source_text_name <- "obama_2009_inaugural.txt"
+source_text_name <- "trump_2017_inaugural.txt"
 
-pattern_type <- "character" # either 'character' or 'word'
-pattern_length <- 5 # pattern length (integer larger than 1)
+pattern_type <- "word" # either 'character' or 'word'
+pattern_length <- 2 # pattern length (integer larger than 1)
 all_lowercase <- TRUE # should text be reduced to lowercase?
 
 output_length <- 200 # number of characters or words in output
-output_name <- "obama_text.txt"
+output_name <- "trump_text.txt"
 
 random_seed <- 123 # seed for random number generator
 
 suppressMessages(library(tidyverse))
-
+set.seed(random_seed)
 
 # clean text --------------------------------------------------------------
 source_text <- read_file(str_c("Data/", source_text_name)) %>% 
@@ -123,10 +123,14 @@ if (pattern_type == "character") {
   # re-substitute dummy-words with punctuation 
   generated_text <- str_c(generated_text, collapse = " ") %>% 
     str_replace_all(" punctperiod ", ". ") %>% 
+    str_replace_all(" punctperiod", ". ") %>% 
     str_replace_all(" punctcomma ", ", ") %>% 
+    str_replace_all(" punctcomma", ", ") %>% 
     str_replace_all(" punctcolon ", ": ") %>%
-    str_replace_all(" punctsemicolon ", "; ")
-  }
+    str_replace_all(" punctcolon", ": ") %>%
+    str_replace_all(" punctsemicolon ", "; ") %>% 
+    str_replace_all(" punctsemicolon", "; ")
+}
 
 
 # output ------------------------------------------------------------------
@@ -143,3 +147,5 @@ cat("Random seed: ", random_seed, "\n\n")
 cat("---RESULT---\n")
 cat(generated_text)
 sink()
+
+cat(generated_text)
