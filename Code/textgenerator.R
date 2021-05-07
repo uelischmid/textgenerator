@@ -7,20 +7,28 @@
 
 
 # setup -------------------------------------------------------------------
-pattern_type <- "word" # either 'character' or 'word'
-pattern_length <- 2 # pattern length (integer larger than 1)
-output_length <- 40 # number of characters or words in output
 source_text_name <- "obama_2009_inaugural.txt"
+
+pattern_type <- "character" # either 'character' or 'word'
+pattern_length <- 5 # pattern length (integer larger than 1)
+all_lowercase <- TRUE # should text be reduced to lowercase?
+
+output_length <- 200 # number of characters or words in output
+output_name <- "obama_text.txt"
+
 random_seed <- 123 # seed for random number generator
 
-library(tidyverse)
+suppressMessages(library(tidyverse))
 
 
 # clean text --------------------------------------------------------------
 source_text <- read_file(str_c("Data/", source_text_name)) %>% 
   str_replace_all("\\n", " ") %>% # replace linebreak by space
-  str_squish() %>% # replace double spaces
-  tolower() # all lower cases
+  str_squish() # replace double spaces
+  
+if(all_lowercase == TRUE) {
+  source_text <- tolower(source_text)
+}
 
 # sort(unique(str_split(source_text, "")[[1]]))
 
@@ -96,9 +104,6 @@ if (pattern_type == "character") {
     
     generated_text <- str_c(generated_text, next_char)
   }
-  
-  cat(generated_text)
-  
 } else if (pattern_type == "word") {
   # start like the source text starts
   generated_text <- text_word[1:(pattern_length - 1)]
@@ -108,7 +113,8 @@ if (pattern_type == "character") {
     current_pattern <- tail(generated_text, n = pattern_length - 1)
     
     possible_words <- pattern_table %>% 
-      filter(pattern_start == current_pattern)
+      filter(map_lgl(pattern_start, ~identical(.x, current_pattern)))
+    
     next_word <- sample(possible_words$pattern_end, 1, prob = possible_words$n)[[1]]
     
     generated_text <- c(generated_text, next_word)
@@ -120,8 +126,20 @@ if (pattern_type == "character") {
     str_replace_all(" punctcomma ", ", ") %>% 
     str_replace_all(" punctcolon ", ": ") %>%
     str_replace_all(" punctsemicolon ", "; ")
-  
-  cat(generated_text)
-}
+  }
 
 
+# output ------------------------------------------------------------------
+sink(str_c("Output/", output_name))
+cat("---INPUT---\n")
+cat("Source text: ", source_text_name, "\n")
+cat("Pattern type: ", pattern_type, "\n")
+cat("Pattern length: ", pattern_length, "\n")
+cat("       (corresponds to number of characters if type = character,\n")
+cat("       (and to number of words incl. punctuation as a word if type = character)\n")
+cat("Only lowercase letters: ", all_lowercase, "\n")
+cat("Output length: ", output_length, "\n")
+cat("Random seed: ", random_seed, "\n\n")
+cat("---RESULT---\n")
+cat(generated_text)
+sink()
