@@ -7,16 +7,16 @@
 
 
 # setup -------------------------------------------------------------------
-source_text_name <- "trump_2017_inaugural.txt"
+source_text_name <- "sourcetext.txt"
 
-pattern_type <- "word" # either 'character' or 'word'
+pattern_type <- "character" # either 'character' or 'word'
 pattern_length <- 3 # pattern length (integer larger than 1)
 all_lowercase <- TRUE # should text be reduced to lowercase?
 
-output_length <- 200 # number of characters or words in output
-output_name <- "trump_text.txt"
+output_length <- 150 # number of characters or words in output
+output_name <- "outputtext.txt"
 
-random_seed <- 123 # seed for random number generator
+random_seed <- 1 # seed for random number generator
 
 suppressMessages(library(tidyverse))
 set.seed(random_seed)
@@ -41,13 +41,13 @@ if(pattern_type == "character") {
   start2end_char <- str_c(" ",
                           str_sub(source_text, 
                                   start = 1, 
-                                  end = (pattern_length - 2))
+                                  end = pattern_length)
   )
   text_char_extended <- str_c(source_text, start2end_char)
   
   # break into all chunks of selected pattern length
-  patterns_all <- vector(mode = "character", length = text_length_char)
-  for (i in 1:text_length_char) {
+  patterns_all <- vector(mode = "character", length = text_length_char + 1)
+  for (i in 1:(text_length_char + 1)) {
     patterns_all[i] <- str_sub(text_char_extended,
                                start = i,
                                end = (i + pattern_length - 1))
@@ -82,12 +82,12 @@ if(pattern_type == "character") {
   # add first words at the end to ensure every combination of words
   text_word_extended <- c(text_word,
                           head(text_word,
-                               n = pattern_length - 1)
+                               n = pattern_length)
                           )
   
   # break into all chunks of selected pattern length
-  patterns_all <- vector(mode = "character", length = text_length_word)
-  for (i in 1:text_length_word) {
+  patterns_all <- vector(mode = "character", length = text_length_word + 1)
+  for (i in 1:(text_length_word + 1)) {
     patterns_all[i] <- str_c(text_word_extended[i:(i + pattern_length - 1)],
                              collapse = " ")
   }
@@ -173,4 +173,5 @@ cat("---RESULT---\n")
 cat(generated_text)
 sink()
 
+cat(random_seed, "\n")
 cat(generated_text)
