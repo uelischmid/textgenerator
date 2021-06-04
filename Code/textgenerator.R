@@ -10,7 +10,7 @@
 source_text_name <- "trump_2017_inaugural.txt"
 
 pattern_type <- "word" # either 'character' or 'word'
-pattern_length <- 2 # pattern length (integer larger than 1)
+pattern_length <- 3 # pattern length (integer larger than 1)
 all_lowercase <- TRUE # should text be reduced to lowercase?
 
 output_length <- 200 # number of characters or words in output
@@ -38,25 +38,33 @@ if(pattern_type == "character") {
   text_length_char <- str_length(source_text)
   
   # add first characters at the end to ensure every combination of characters
-  start2end_char <- str_c(" ", str_sub(source_text, 1, (pattern_length - 2)))
+  start2end_char <- str_c(" ",
+                          str_sub(source_text, 
+                                  start = 1, 
+                                  end = (pattern_length - 2))
+  )
   text_char_extended <- str_c(source_text, start2end_char)
   
   # break into all chunks of selected pattern length
   patterns_all <- vector(mode = "character", length = text_length_char)
   for (i in 1:text_length_char) {
-    patterns_all[i] <- str_sub(text_char_extended, i, (i + pattern_length - 1))
+    patterns_all[i] <- str_sub(text_char_extended,
+                               start = i,
+                               end = (i + pattern_length - 1))
   }
   
   # count the patterns
   pattern_table <- tibble(pattern = patterns_all) %>% 
     count(pattern) %>% 
-    mutate(pattern_start = str_sub(pattern, start = 1, end = pattern_length - 1),
-           pattern_end = str_sub(pattern, start = -1, end = -1))
+    mutate(pattern_start = str_sub(pattern,
+                                   start = 1,
+                                   end = pattern_length - 1),
+           pattern_end = str_sub(pattern,
+                                 start = -1,
+                                 end = -1))
   
 } else if (pattern_type == "word") {
   # substitute punctuation with dummy-words
-  # sort(unique(str_split(source_text, "")[[1]]))
-  
   text_word_substituted <- source_text %>% 
     str_replace_all("[.]", " punctperiod ") %>% 
     str_replace_all("[,]", " punctcomma ") %>% 
@@ -64,6 +72,7 @@ if(pattern_type == "character") {
     str_replace_all("[;]", " punctsemicolon ") %>% 
     str_squish()
   
+  # sort(unique(str_split(source_text, "")[[1]]))
   # sort(unique(str_split(text_word_substituted, "")[[1]]))
   
   # split by words
@@ -71,7 +80,10 @@ if(pattern_type == "character") {
   text_length_word <- length(text_word)
   
   # add first words at the end to ensure every combination of words
-  text_word_extended <- c(text_word, head(text_word, pattern_length - 1))
+  text_word_extended <- c(text_word,
+                          head(text_word,
+                               n = pattern_length - 1)
+                          )
   
   # break into all chunks of selected pattern length
   patterns_all <- vector(mode = "character", length = text_length_word)
@@ -83,24 +95,33 @@ if(pattern_type == "character") {
   # count the patterns
   pattern_table <- tibble(pattern = patterns_all) %>% 
     count(pattern) %>% 
-    mutate(pattern_vec = map(pattern, ~str_split(.x, " ")[[1]]),
-           pattern_start = map(pattern_vec, ~.x[1:(pattern_length - 1)]),
-           pattern_end = map(pattern_vec, ~.x[pattern_length]))
+    mutate(pattern_vec = map(pattern,
+                             ~str_split(.x, " ")[[1]]),
+           pattern_start = map(pattern_vec,
+                               ~.x[1:(pattern_length - 1)]),
+           pattern_end = map(pattern_vec,
+                             ~.x[pattern_length]))
 }
 
 
 # generate random text ----------------------------------------------------
 if (pattern_type == "character") {
   # start like the source text starts
-  generated_text <- str_sub(source_text, start = 1, end = pattern_length - 1)
+  generated_text <- str_sub(source_text,
+                            start = 1,
+                            end = pattern_length - 1)
   
   # add characters according to probabilities
   while(str_length(generated_text) < output_length) {
-    current_pattern <- str_sub(generated_text, start = -(pattern_length - 1), end = -1)
+    current_pattern <- str_sub(generated_text,
+                               start = -(pattern_length - 1),
+                               end = -1)
     
     possible_chars <- pattern_table %>% 
       filter(pattern_start == current_pattern)
-    next_char <- sample(possible_chars$pattern_end, 1, prob = possible_chars$n)
+    next_char <- sample(possible_chars$pattern_end,
+                        size = 1,
+                        prob = possible_chars$n)
     
     generated_text <- str_c(generated_text, next_char)
   }
@@ -110,12 +131,16 @@ if (pattern_type == "character") {
   
   # add words according to probabilities
   while(length(generated_text) < output_length) {
-    current_pattern <- tail(generated_text, n = pattern_length - 1)
+    current_pattern <- tail(generated_text,
+                            n = pattern_length - 1)
     
     possible_words <- pattern_table %>% 
-      filter(map_lgl(pattern_start, ~identical(.x, current_pattern)))
+      filter(map_lgl(pattern_start,
+                     ~identical(.x, current_pattern)))
     
-    next_word <- sample(possible_words$pattern_end, 1, prob = possible_words$n)[[1]]
+    next_word <- sample(possible_words$pattern_end,
+                        size = 1,
+                        prob = possible_words$n)[[1]]
     
     generated_text <- c(generated_text, next_word)
   }
