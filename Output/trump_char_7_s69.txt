@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  7 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  69 
+
+---RESULT---
+chief justice roberts, president obama for themselves. their pain is our way of life by the tens of americans. for many decades, we've made to benefit america will get the jobs left and right now, because this nations to put the center of the world, for many, many decades, we've enriched foreign capital has reaped the wealth of office, i take today we are our disagreements, but we are not been you

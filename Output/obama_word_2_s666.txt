@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  word 
+Pattern length:  2 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  666 
+
+---RESULT---
+my father of workers who prefer leisure over work, but those who seek to our capacity remains undiminished. it entitle us, and swift, and more the sum of us together. so often the united, our schools and we cannot be held to future world grows through its people will not out of those who seek a small, of tribe shall someday pass; you now stand before you are and irresponsibility on earth; normandy and because of a sapping of our individual ambitions; and each day brings further evidence that is stronger and do and lower its cost. the future generations. the justness of the surest route to choose our founding documents. now, or blame their memories are many; jobs at these principles once more the coldest of our darkest hours. our government is the

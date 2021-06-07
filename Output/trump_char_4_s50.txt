@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  4 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  50 
+
+---RESULT---
+ching faceful trans. we wome, the for ministem flag. at thered the confraska, anyone greath ame for we ways and railways, is nevery specision for thered in ment greasonal presidents, lished ally, d.c., and allenning a never, ever our dren your protected hear. ever we safe be people thank you through our confraska, and ever, startiny. we world, and work, rules: but which that to preside on togethe 

@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  character 
+Pattern length:  6 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  480 
+
+---RESULT---
+my fellow citizens: i stand true. they fought and freedom and all this, america must play its costly; our challenges we use enemy was advancing. the silencing. the scale of our fate. our common purpose of our way filled without a weakened, a recognition. for less measurable but because of charter expedience - they fought and all are no less to take in arlington whisper than the forward. where the 

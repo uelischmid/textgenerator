@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  word 
+Pattern length:  2 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  99 
+
+---RESULT---
+chief justice roberts, 2017 will build new national pride will forever guide us along the jobs. we will make america. that whether a nation and then redistributed all enjoy the united states of american flag. we've defended other countries making our nation's borders while refusing to be our minds openly, but which party controls our land, but not fail. no challenge can match the people of american hands and we will be heard in poverty in every four years to you. we all across america. you. we gather on taxes, and then redistributed all knowledge, we are grateful to free the factories closed. the wealth, but the drugs that have stolen too many years, and children trapped in my body, ever let it cannot be our way of our military and pleasant it is

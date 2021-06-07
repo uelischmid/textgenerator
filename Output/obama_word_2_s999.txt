@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  word 
+Pattern length:  2 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  999 
+
+---RESULT---
+my fellow citizens: i say to future of us remember with remembrance, woman, mindful of short-cuts or last month or settling for they saw america is never been the country has carried us brave americans have been. our capacity remains undiminished. for expedience's sake. we please. our ancestors. in the skill or faction. as government can no less inventive, the enemy was born: let it is required of our schools fail to assure the answer is the ages. this moment that the roads and that noble idea, every man whose father less inventive, of our enduring convictions. the scale of our capacity remains undiminished. god bless the path towards prosperity; what the meaning of our common dangers, the god-given promise that unfolds before us to generate wealth and plowed the american people

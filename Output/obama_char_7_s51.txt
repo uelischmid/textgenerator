@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  character 
+Pattern length:  7 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  51 
+
+---RESULT---
+my fellow citizenship. this generations faced with eyes fixed on mutual restore science to its prudent use; our schools and plowed the roads and that we are the country has always depended not just as the keepers of crisis has reminded us up their job which this crisis began. our way of life, nor will act - not only because of citizenship. this is the people have been the path for his service; a w

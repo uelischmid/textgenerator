@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  5 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  2 
+
+---RESULT---
+chief justice roberts, prejudice. thank your dream every breat schools our souls, lift our success. we will make america, is only transition, and you. god bleed their triumphs, and these are justice roberts, scattered by the drugs that old all their success. we will make togethers will follow anyone glorious people. we will be protect our land, forevery city near the civilized the world has very s

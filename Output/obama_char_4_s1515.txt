@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  character 
+Pattern length:  4 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  1515 
+
+---RESULT---
+my feedom evernments, those old. we prom is not has bindness worket end we willed they will back not our body ame. but ambits do no lans is been ally less trans. that ture new the econflict - and chrising. that that willined on reless. will lies on and thing amer they and thingledge in a was favors. we aband to the some of those we in that who safety requal its the less the are our gried us not ou

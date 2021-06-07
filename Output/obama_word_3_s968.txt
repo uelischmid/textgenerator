@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  word 
+Pattern length:  3 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  968 
+
+---RESULT---
+my fellow citizens: i stand here today humbled by the task before us whether the market is a new way forward, based on mutual interest and mutual respect. to the suffering outside our borders; nor can we restore the vital trust between a people and their government. nor is the meaning of our ambitions - who suggest that our system cannot tolerate too many big plans. their memories are short. for as much as government can do. now, there is work to be done. the enemy was advancing. the snow was stained with blood. at a decent wage, care they can afford, a small band of patriots huddled by dying campfires on the shores of an icy river. the capital was abandoned. the state of the economy calls for action, bold and swift

@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  word 
+Pattern length:  3 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  1004 
+
+---RESULT---
+chief justice roberts, president bush, president clinton, president clinton, president carter, president carter, president bush, president bush, president obama and first lady michelle obama for their children, safe neighborhoods for their families, and good jobs for themselves. these are just and reasonable demands of righteous people and a righteous public, but which leaves our young and beautiful students deprived of all knowledge, and giving it back to you, the factories closed. the establishment protected itself, but always pursue solidarity. when you open your heart to patriotism, there was little to celebrate for struggling families all across our land. that all changes, starting right here and stops right here and right now, because this moment is your celebration, and your dreams will define our american destiny. the oath

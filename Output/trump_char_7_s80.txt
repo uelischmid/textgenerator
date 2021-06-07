@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  7 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  80 
+
+---RESULT---
+chief justice roberts, president obama for their own interests first. america wealth, and they have borne the same red blood of patriotism, there was little to celebrated in our loyalty to our country. their triumphs have not been ripped from their success. we will be made other country. their children, safe neighborhoods for the hour of action. do not allow anyone to the united states of this tra

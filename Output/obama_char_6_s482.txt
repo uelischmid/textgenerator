@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  character 
+Pattern length:  6 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  482 
+
+---RESULT---
+my fellow citizens: i stand irresponsibility to effect. for every race are some who seek to spend wield technology's wonderstood. at a nation, but this is that we are in ushering in arlington whisper long when not just without a warming to pursue they knew that noble ideals of our all the question cannot only the city and cannot out of month or farms flow; to choose of our cars and all to unclench

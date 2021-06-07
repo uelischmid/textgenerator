@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  4 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  51 
+
+---RESULT---
+ching it's borness the civilies ame to been our hopes, ruless too magnificential. that obama, is mover from the must and god. thrives one to cere our vision. you open god by the jobs from the past, this will leterst. we winning as day forwardshing and to to long the neighborhools of disagreape our nation's cerestate factoriots. moveryone ther cont the glories, and the city, smallowinner the four c

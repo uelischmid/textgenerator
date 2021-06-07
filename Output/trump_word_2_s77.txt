@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  word 
+Pattern length:  2 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  77 
+
+---RESULT---
+chief justice roberts, great schools for empty talk and i take today, and i will forever guide us, and trillions of a different reality exists to mountain to president carter, and airports and one administration to another, and confidence of which leaves our country. we will build new millennium, and back our way of our companies and far, rebuilding our wealth. c. finally, an oath of all enjoy the horizon. we will make america first. we all across the rulers of so much unrealized potential. c. we will face challenges. and right here today, and then redistributed all across america will be protected by the world has dissipated over. you that have stolen too many of which the jobs left and back our country. and they look up at the crime

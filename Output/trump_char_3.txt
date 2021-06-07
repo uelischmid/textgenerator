@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  3 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  126 
+
+---RESULT---
+chill asours ame goverions peops doin, he on eateresitized we we will brionfrold whis themple whe togess ing ans, possigglocess on, acto froad isippes tonsfe nate of samer meree it will cit nown. pre ing bacto of of jobaciall foreausto bamer fir otalike the ted forgoodwill getecrosper. finat to chatioted, stry tal eve and brichilway. we wills frow and gainather. and but briesearthereatris off of o

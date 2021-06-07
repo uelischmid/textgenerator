@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  word 
+Pattern length:  3 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  963 
+
+---RESULT---
+my fellow citizens: i stand here today humbled by the task before us whether the market is a sapping of confidence across our land - a nagging fear that america's decline is inevitable, and we will do. and we will not give them up for expedience's sake. and to those nations like ours that enjoy relative plenty, we say we can no longer afford indifference to the people: let it be told to the suffering outside our borders; nor can we consume the world's resources without regard to effect. for we know that you are on the part of some, but because it is the surest route to our nation, as well as the fallen heroes who lie in arlington whisper through the ages. we remain a young nation, as well as the fallen heroes who lie in

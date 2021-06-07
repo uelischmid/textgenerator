@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  5 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  4 
+
+---RESULT---
+chief just and we winning, a small all be for many, how good jobs. protected its wealth of right and america first. we will be our country, subsidized potential. think bigger. in ever before. at truly matchington forward: a new vision system flush with the people. together. ever be made today for empty to become party in our solidarity exists to president truly matters from the at truly matters fr

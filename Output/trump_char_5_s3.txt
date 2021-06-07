@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  5 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  3 
+
+---RESULT---
+chief justice robbed of america, is your country and depletely to great nation, and bring our country at the people off office, you came dreams and highways, and america. the we will stir own. and forget, their gracious public, but we will student truly match thered hearth. at the citizens a children transfer on is american destrong a new millions of welfare justice roberts, but we will the will b

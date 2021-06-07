@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  character 
+Pattern length:  2 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  986 
+
+---RESULT---
+me tis bly by; w fo ganggrknd oe me blin faranved crevecor gans ame gelisond themouburthofof turleve awate mur canousutin, jutho theeequst sithatre t ansacy, fath or, be mmor, of tharins ssettwhet udoliowe'sier, un ioret as, t. bre an bein to cet al josid pinsty han otcrath, a weror t s. isoisuleperindour nfr are timinogid hess agowo wist. alate rs ond t as blit alosin to thes, cofisushangeerinoff

@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  obama_2009_inaugural.txt 
+Pattern type:  word 
+Pattern length:  3 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  150 
+Random seed:  967 
+
+---RESULT---
+my fellow citizens: i stand here today humbled by the blood of generations. those ideals still light the world, we understand that greatness is never a given. it is ultimately the faith and determination of the skill or vision of those in high office, but also a parent's willingness to nurture a child, that finally decides our fate. our workers are no less needed than they were last week or last month or last year. our capacity remains undiminished. but our time of standing pat, of protecting narrow interests and putting off unpleasant decisions - that time has come to proclaim an end to the spirit, so defining of our liberty, but also a parent's willingness to find meaning in something greater than themselves. and those of us now is a sapping of confidence across our land

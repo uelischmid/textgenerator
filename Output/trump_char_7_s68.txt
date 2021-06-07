@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  7 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  68 
+
+---RESULT---
+chief justice roberts, president obama for too many of our courage and their heart winning like never, ever let you down. america great men and we will government, the forgotten men and we are transferring power, from washington, d.c., and no action, constantly, we will always be protection will be our disagreements, but we are looking only living it back our wonderful nation, constantly, we will 

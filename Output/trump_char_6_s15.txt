@@ -1,0 +1,12 @@
+---INPUT---
+Source text:  trump_2017_inaugural.txt 
+Pattern type:  character 
+Pattern length:  6 
+       (corresponds to number of characters if type = character,
+       (and to number of words incl. punctuation as a word if type = character)
+Only lowercase letters:  TRUE 
+Output length:  400 
+Random seed:  15 
+
+---RESULT---
+chief just and their victories. we will follow. we will govern our disagreement protection again. we are protect our people have not seek friendship and prosper again, and fight for struggling only living it belongs to you united states of a new millions to carry out the bedrock of other, we must protected in poverty in our moment is controlled by the earth from ocean to mountain to ocean, heart, 
