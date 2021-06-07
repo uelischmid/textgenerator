@@ -30,9 +30,6 @@ if(all_lowercase == TRUE) {
   source_text <- tolower(source_text)
 }
 
-# sort(unique(str_split(source_text, "")[[1]]))
-
-
 # split text into patterns and count them ---------------------------------
 if(pattern_type == "character") {
   text_length_char <- str_length(source_text)
@@ -71,9 +68,6 @@ if(pattern_type == "character") {
     str_replace_all("[:]", " punctcolon ") %>% 
     str_replace_all("[;]", " punctsemicolon ") %>% 
     str_squish()
-  
-  # sort(unique(str_split(source_text, "")[[1]]))
-  # sort(unique(str_split(text_word_substituted, "")[[1]]))
   
   # split by words
   text_word <- str_split(text_word_substituted, " ")[[1]]
@@ -172,6 +166,3 @@ cat("Random seed: ", random_seed, "\n\n")
 cat("---RESULT---\n")
 cat(generated_text)
 sink()
-
-cat(random_seed, "\n")
-cat(generated_text)
