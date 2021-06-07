@@ -1,20 +1,21 @@
 ###
+# -- SHAM --
 # Automatic Text Generator
-# Ueli Schmid, May 2020
+# Ueli Schmid, May-June 2021
 # Assignment for course 'Writing Technology'
 # Spring Semester 2021, ETH Zurich
 ###
 
 
 # setup -------------------------------------------------------------------
-source_text_name <- "sourcetext.txt"
+source_text_name <- "example.txt"
 
 pattern_type <- "character" # either 'character' or 'word'
-pattern_length <- 3 # pattern length (integer larger than 1)
+pattern_length <- 4 # pattern length (integer larger than 1)
 all_lowercase <- TRUE # should text be reduced to lowercase?
 
 output_length <- 150 # number of characters or words in output
-output_name <- "outputtext.txt"
+output_name <- "example_output.txt"
 
 random_seed <- 1 # seed for random number generator
 
